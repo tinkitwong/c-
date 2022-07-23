@@ -4,16 +4,6 @@ using namespace std;
 
 int main ()
 {    
-    int a;    
-    int b;
-    int sum;
-
-    cout << "Enter a number!" << endl;
-    cin >> a;
-    cout << "Enter another number!" << endl;
-    cin >> b;
-
-    sum = a + b;
-    cout << "the sum are those numbers is " << sum << endl;
+    // This is about order precedence. Just google this if you don't know.
     return 0;
 }
