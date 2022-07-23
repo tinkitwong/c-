@@ -1,3 +1,4 @@
+// preprocessor directive
 #include <iostream>
 
 using namespace std;
