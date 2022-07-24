@@ -29,6 +29,5 @@ int main()
     cout << "Total age: " << totalAge << endl;
     cout << "Number of ages included: " << count << endl;
     cout << "Average age: " << totalAge / count << endl;
-    return 0;    
 }
 
