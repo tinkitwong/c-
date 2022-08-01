@@ -14,6 +14,11 @@ int main()
 
     // faster way to initiate a file object
     ofstream file_2("tuna2.text");
+    if(file_2.is_open()) {
+        cout << "file_2 is open" << endl;
+    } else {
+        cout << "we scrwed up" << endl;
+    }
     file_2 << "file_2 is here\n";
     file_2.close();
 }
