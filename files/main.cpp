@@ -10,4 +10,5 @@ int main()
     // create file if it does not exist
     file.open("tuna.text");
     file << "I am love tuna and tuna loves me.\n";
+    file.close();
 }
