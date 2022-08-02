@@ -4,16 +4,30 @@
 using namespace std;
 
 int getWhatTheyWant();
+void displayItems(int);
 
 // main function
 int main()
 {
- int whatTheyWant;
- whatTheyWant = getWhatTheyWant();
-
- while(whatTheyWant != 4){
+    int whatTheyWant;
     whatTheyWant = getWhatTheyWant();
- }   
+
+    while (whatTheyWant != 4)
+    {
+        whatTheyWant = getWhatTheyWant();
+        switch (whatTheyWant)
+        {
+        case 1:
+            displayItems(1);
+            break;
+        case 2:
+            displayItems(2);
+            break;
+        case 3:
+            displayItems(3);
+            break;
+        }
+    }
 }
 
 // getWhatTheyWant function
@@ -27,4 +41,46 @@ int getWhatTheyWant()
 
     cin >> choice;
     return choice;
+}
+
+// displayItems function
+void displayItems(int a)
+{
+    ifstream file("./objects.txt");
+    string name;
+    double power;
+
+    if (a == 1)
+    {
+        while (file >> name >> power)
+        {
+            if (power == 0)
+            {
+                cout << name << " " << power << endl;
+            }
+        }
+    }
+    else if (a == 2)
+    {
+        while (file >> name >> power)
+        {
+            if (power > 0)
+            {
+                cout << name << " " << power << endl;
+            }
+        }
+    }
+    else if (a == 3)
+    {
+        while (file >> name >> power)
+        {
+            if (power < 0)
+            {
+                cout << name << " " << power << endl;
+            }
+        }
+    }
+    else {
+        cout << "Enter the right choice" << endl;
+    }
 }
