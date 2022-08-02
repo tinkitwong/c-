@@ -1,0 +1,9 @@
+chair 0
+ninja -54
+fruit 34
+shoe 0
+pencil 0
+candy 98
+soda 12
+meth -33
+dirtyneedle -99
