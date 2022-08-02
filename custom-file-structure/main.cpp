@@ -5,18 +5,13 @@ using namespace std;
 
 int main()
 {
-    ofstream file("players.text");
-    cout << "Enter player id, name, and money" << endl;
-    // end file marker is Ctl+D for mac
-    cout << "press Ctrl+D to quit\n" << endl;
-
-    int idNumber;
+    // reading data from file
+    // do not need to call file.close() for ifstream
+    ifstream file("players.text");
+    int id;
     string name;
     double money;
-
-    // user enter idNumber name money
-    while (cin >> idNumber >> name >> money) {
-        file << idNumber << " " << name << " " << money << endl;
+    while (file >> id >> name >> money) {
+        cout << id << ", " << name << ", " << money << endl;
     }
-    file.close();
 }
